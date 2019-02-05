@@ -35,7 +35,7 @@ class LagouSpider(CrawlSpider):
             brower = webdriver.Chrome(executable_path="chromedriver.exe")
             brower.get("https://passport.lagou.com/login/login.html")
             brower.find_element_by_css_selector(".form_body .input.input_white").send_keys("13764021516")
-            brower.find_element_by_css_selector('.form_body input[type="password"]').send_keys("a1b2y1z2")
+            brower.find_element_by_css_selector('.form_body input[type="password"]').send_keys("")
             brower.find_element_by_css_selector('div[data-view="passwordLogin"] input.btn_lg').click()
             time.sleep(10)
             cookies = brower.get_cookies()
